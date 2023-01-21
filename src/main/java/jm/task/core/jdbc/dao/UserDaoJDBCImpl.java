@@ -179,7 +179,6 @@ public class UserDaoJDBCImpl implements UserDao {
     boolean tableExistsSQL(Connection connection, String tableName) throws SQLException {
         DatabaseMetaData meta = connection.getMetaData();
         ResultSet resultSet = meta.getTables(null, null, tableName, new String[]{"TABLE"});
-
         return resultSet.next();
     }
 }
